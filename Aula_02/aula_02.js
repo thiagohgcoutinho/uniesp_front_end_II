@@ -6,45 +6,59 @@ var listaSexo = [];
 
 var maiorAltura = 0;
 
-var menorAltura = 10;
+var menorAltura = 0;
 
 var soma = 0;
 
 var numFem = 0;
 
-while (count < 3){
+var numMas = 0;
+
+while (count < 5){
     
     var altura = prompt("Qual sua altura?");
     listaAltura.push(parseFloat(altura));
 
-        if (altura > maiorAltura){
-
+        if (count < 1){
             maiorAltura = altura;
-        };
-
-        if (altura < menorAltura){
-
             menorAltura = altura;
+        } else {
+
+            if (altura > maiorAltura){
+
+                maiorAltura = altura;
+            };
+    
+            if (altura < menorAltura){
+    
+                menorAltura = altura;
+            };
+
         };
 
     var sexo = prompt("Você é do sexo masculino ou feminino?");
     listaSexo.push(sexo);
 
         if (sexo == "feminino"){
-            numFem = numFem + 1;
+            numFem += 1;
         };
 
     count++;
 };
 
+for (var i = 0; i < listaSexo.length; i++){
 
-for (var i = 0; i < listaAltura.length; i++){
+    if (listaSexo[i] == "masculino"){
 
-    soma+=listaAltura[i];
+        soma += listaAltura[i];
+
+        numMas += 1;
+
+    };
 
 };
 
-var media = soma / listaAltura.length;
+var media = soma / numMas;
 
 document.getElementById("lista_altura").innerHTML = (listaAltura);
 
