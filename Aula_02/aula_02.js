@@ -14,7 +14,7 @@ var numFem = 0;
 
 var numMas = 0;
 
-while (count < 15){
+while (count < 2){
     
     var altura = prompt("Qual sua altura?");
     listaAltura.push(parseFloat(altura));
