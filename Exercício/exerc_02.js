@@ -1,16 +1,12 @@
-var numeroUsuario = prompt("Digite um número. Para parar a lista, digite 0.");
-var listaUsuario = [];
-var listaMult = [];
-
-while (numeroUsuario != 0){
-    listaUsuario.push(parseFloat(numeroUsuario));
-    var numeroUsuario = prompt("Digite um número. Para parar a lista, digite 0.");
-}
-
-
-function multiplicarLista(lista){
-    document.getElementById("lista_usuario").innerHTML = listaUsuario;
-    for (var i = 0; i < lista.length; i++){
-        var listaMultiplicada
+function multiplicar2(){
+    if (arguments.length == 0){
+        console.log("Insira ao menos um número");
+    } else {
+        for (var i = 0; i < arguments.length; i++){
+            var resultado = arguments[i] * 2;
+            console.log(resultado);
+        }
     }
 }
+
+var numerosUsuario = (multiplicar2(6, 8, 12));
