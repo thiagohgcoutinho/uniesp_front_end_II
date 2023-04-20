@@ -62,6 +62,7 @@ var pessoa2 = {
     nome: "Ana",
     idade: 34,
     profissao: "Bombeiro Militar",
+    telefone: "83 99123-5252",
     endereco: {
         logradouro: "Rua Antônio Vieira da Silva",
         bairro: "Jardim São Paulo",
